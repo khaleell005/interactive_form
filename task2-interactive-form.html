@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexaFlow — Create Account</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LEFT -->
+  <aside class="left-panel">
+    <div class="grid-bg"></div>
+    <div class="logo">Nexa<span>Flow</span></div>
+    <div class="panel-content">
+      <div class="panel-tag">// Join the Flow</div>
+      <h2 class="panel-title">
+        Work faster.<br>
+        Think <span class="outline">clearer.</span><br>
+        Ship together.
+      </h2>
+      <p class="panel-desc">
+        Join 40,000+ teams who moved from chaos to calm using NexaFlow as their single source of truth.
+      </p>
+      <ul class="feature-list">
+        <li>Free forever plan — no credit card needed</li>
+        <li>Invite unlimited teammates immediately</li>
+        <li>200+ integrations available on day one</li>
+        <li>SOC 2 Type II certified &amp; GDPR compliant</li>
+      </ul>
+    </div>
+    <p class="panel-footer">© 2025 NexaFlow Inc.</p>
+  </aside>
+
+  <!-- RIGHT -->
+  <main class="right-panel">
+    <div class="form-wrapper">
+
+      <!-- FORM -->
+      <div id="formView">
+        <h1 class="form-heading">Create your account</h1>
+        <p class="form-sub">Already have one? <a href="#">Sign in</a></p>
+
+        <!-- Name -->
+        <div class="field" id="field-name">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" placeholder="Khaleel Ahmad" autocomplete="name" />
+          <div class="field-msg" id="msg-name"></div>
+        </div>
+
+        <!-- Email -->
+        <div class="field" id="field-email">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="you@example.com" autocomplete="email" />
+          <div class="field-msg" id="msg-email"></div>
+        </div>
+
+        <!-- Phone -->
+        <div class="field" id="field-phone">
+          <label for="phone">Phone Number <span class="label-hint">(optional)</span></label>
+          <div class="phone-row">
+            <input class="country-code" type="text" value="+234" id="countryCode" style="color:var(--cyan);" />
+            <div class="field">
+              <input type="tel" id="phone" placeholder="08012345678" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="field-msg" id="msg-phone"></div>
+        </div>
+
+        <!-- Password -->
+        <div class="field" id="field-password">
+          <label for="password">Password <span class="label-hint">min 8 characters</span></label>
+          <div class="pw-wrapper">
+            <input type="password" id="password" placeholder="Create a strong password" autocomplete="new-password" />
+            <button class="toggle-pw" id="togglePw" type="button" aria-label="Toggle password visibility">👁</button>
+          </div>
+          <div class="strength-track" id="strengthTrack">
+            <div class="strength-seg" id="seg1"></div>
+            <div class="strength-seg" id="seg2"></div>
+            <div class="strength-seg" id="seg3"></div>
+            <div class="strength-seg" id="seg4"></div>
+          </div>
+          <div class="field-msg" id="msg-password"></div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="field" id="field-confirm">
+          <label for="confirm">Confirm Password</label>
+          <div class="pw-wrapper">
+            <input type="password" id="confirm" placeholder="Repeat your password" autocomplete="new-password" />
+            <button class="toggle-pw" id="toggleConfirm" type="button" aria-label="Toggle confirm visibility">👁</button>
+          </div>
+          <div class="field-msg" id="msg-confirm"></div>
+        </div>
+
+        <!-- Terms -->
+        <div class="checkbox-row">
+          <input type="checkbox" id="terms" />
+          <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+
+        <button class="btn-submit" id="submitBtn" type="button" onclick="handleSubmit()">
+          Create Account →
+        </button>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="success-screen" id="successView">
+        <div class="success-icon">✓</div>
+        <h2 class="success-title">You're in!</h2>
+        <p class="success-sub">Welcome to NexaFlow, <strong id="successName"></strong>. Check your inbox to verify your email.</p>
+        <button class="btn-back" onclick="resetForm()">← Back to Form</button>
+      </div>
+
+    </div>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
